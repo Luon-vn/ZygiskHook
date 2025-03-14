@@ -24,11 +24,9 @@ jobs:
         distribution: 'temurin'
         java-version: '17'
 
-    - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
-      
-    - name: Build with Gradle
+    - name: Grant execute permission for gradlew & Build with Gradle
       run: |
+        chmod +x gradlew
         ./gradlew assembleRelease
         ls -alvh out/
 
@@ -44,7 +42,7 @@ jobs:
       with:
         tag_name: ${{ steps.tag.outputs.release_tag }}
         files: |
-          ./zygisk-module.zip
+          ./out/zygisk-module.zip
     # Done release
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
