@@ -6,6 +6,7 @@
 #include <unistd.h>
 #include <cstdlib>
 #include <thread>
+#include <filesystem>
 #include <ranges>
 #include "zygisk.hpp"
 #include "cJSON.h"
