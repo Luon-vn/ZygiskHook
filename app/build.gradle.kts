@@ -118,7 +118,8 @@ tasks.register("copyFiles") {
 tasks.register<Zip>("zip") {
     dependsOn("copyFiles")
 
-    archiveFileName.set("ToramHack_${project.android.defaultConfig.versionName}.zip")
+    // archiveFileName.set("ZygiskModule_${project.android.defaultConfig.versionName}.zip")
+    archiveFileName.set("zygisk-module.zip")
     destinationDirectory.set(project.rootDir.resolve("out"))
 
     from(project.rootDir.resolve("module"))
