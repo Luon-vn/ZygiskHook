@@ -156,7 +156,7 @@ public:
 
 
         bool doHook = false;
-        std::string config_file = "/data/local/tmp/zygisk.hook/" + std::string_view(nice_name) + ".txt";
+        std::string config_file = std::string("/data/local/tmp/zygisk.hook/") + nice_name + std::string(".txt");
 
         if (std::filesystem::exists(config_file)) {
             doHook = true;
