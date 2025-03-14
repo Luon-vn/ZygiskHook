@@ -4,10 +4,12 @@
 #include <android/asset_manager.h>
 #include <dlfcn.h>
 #include <unistd.h>
+#include <cstdlib>
 #include <thread>
 #include <ranges>
 #include "zygisk.hpp"
 #include "cJSON.h"
+#include "shadowhook.h"
 
 #define TARGET_LIB "libdexprotectorx.so"
 #define LOG_TAG "ZygiskHook"
