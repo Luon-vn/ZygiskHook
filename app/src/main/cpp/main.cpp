@@ -1,4 +1,5 @@
 #include <android/log.h>
+#include <android/dlext.h>
 #include <sys/system_properties.h>
 #include <android/asset_manager.h>
 #include <unistd.h>
